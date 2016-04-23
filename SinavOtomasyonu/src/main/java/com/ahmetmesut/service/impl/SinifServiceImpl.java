@@ -53,6 +53,10 @@ public class SinifServiceImpl implements SinifService {
 	public Sinif sinifAraId(long sinifId) {
 		return sinifDao.sinifAraId(sinifId);
 	}
+	@Override
+	public List<Sinif> butunSinifAdlari() {
+		return sinifDao.butunSinifAdlari();
+	}
 
 
 }

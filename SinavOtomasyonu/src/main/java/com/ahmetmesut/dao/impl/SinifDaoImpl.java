@@ -84,4 +84,9 @@ public class SinifDaoImpl implements SinifDao {
 
 	}
 
+	@Override
+	public List<Sinif> butunSinifAdlari() {
+		return sessionFactory.getCurrentSession().createSQLQuery("SELECT sinifAdi FROM okulveritabani.sinif").list();
+	}
+
 }

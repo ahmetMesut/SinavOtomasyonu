@@ -89,4 +89,9 @@ public class AgDaoImpl implements AgDao {
 		return sessionFactory.getCurrentSession().get(ArastirmaGorevlisi.class, agId);
 	}
 
+	@Override
+	public List<ArastirmaGorevlisi> butunAgAdlari() {
+		return sessionFactory.getCurrentSession().createSQLQuery("SELECT agAdi FROM okulveritabani.arastirma_gorevlisi").list();
+	}
+
 }

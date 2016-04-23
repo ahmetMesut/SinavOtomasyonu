@@ -56,6 +56,11 @@ public class AgServiceImpl implements AgService {
 		return agDao.agAraId(agId);
 	}
 
+	@Override
+	public List<ArastirmaGorevlisi> butunAgAdlari() {
+		return agDao.butunAgAdlari();
+	}
+
 	
 
 }

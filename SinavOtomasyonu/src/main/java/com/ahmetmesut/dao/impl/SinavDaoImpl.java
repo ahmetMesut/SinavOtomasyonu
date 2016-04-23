@@ -81,5 +81,26 @@ public class SinavDaoImpl implements SinavDao {
 	public Sinav sinavAraId(long sinavId) {
 		return sessionFactory.getCurrentSession().get(Sinav.class, sinavId);
 	}
+	@Override
+	public List<String> saatAyarla() {
+		List<String> saatler = new ArrayList<String>();
+		saatler.add("09:00");
+		saatler.add("09:30");
+		saatler.add("10:00");
+		saatler.add("10:30");
+		saatler.add("11:00");
+		saatler.add("13:00");
+		saatler.add("13:30");
+		saatler.add("14:00");
+		saatler.add("14:30");
+		saatler.add("15:00");
+		saatler.add("15:30");
+		saatler.add("16:00");
+		saatler.add("16:30");
+		saatler.add("17:00");
+		
+		return saatler;
+	}
+
 
 }

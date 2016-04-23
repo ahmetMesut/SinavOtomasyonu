@@ -53,5 +53,9 @@ public class SinavServiceImpl implements SinavService {
 	public Sinav sinavAraId(long sinavId) {
 		return sinavDao.sinavAraId(sinavId);
 	}
+	@Override
+	public List<String> saatAyarla() {
+		return sinavDao.saatAyarla();
+	}
 
 }

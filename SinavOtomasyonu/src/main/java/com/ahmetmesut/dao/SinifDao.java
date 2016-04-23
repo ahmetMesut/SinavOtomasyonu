@@ -18,5 +18,7 @@ public interface SinifDao {
 	public Sinif sinifGuncelle(Sinif sinif);
 	
 	public Sinif sinifAraId(long sinifId);
+	
+	public List<Sinif> butunSinifAdlari();
 
 }

@@ -1,7 +1,6 @@
 package com.ahmetmesut.controller;
 
 import java.util.List;
-import java.util.Map;
 
 import org.jboss.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,10 +10,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.ahmetmesut.model.ArastirmaGorevlisi;
 import com.ahmetmesut.model.Ders;
 import com.ahmetmesut.model.Sinav;
+import com.ahmetmesut.model.Sinif;
+import com.ahmetmesut.service.AgService;
 import com.ahmetmesut.service.DersService;
 import com.ahmetmesut.service.SinavService;
+import com.ahmetmesut.service.SinifService;
 
 @Controller
 public class SinavController {
@@ -23,6 +26,10 @@ public class SinavController {
 	SinavService sinavService;
 	@Autowired
 	DersService dersService;
+	@Autowired
+	SinifService sinifService;
+	@Autowired
+	AgService agService;
 
 	private static final Logger logger = Logger.getLogger(SinavController.class);
 	
@@ -38,7 +45,17 @@ public class SinavController {
 		logger.info("Sinav ekleniyor.Bilgi : " +sinav);
 		
 		List<Ders> dersler = dersService.butunDersAdlari();
-		return new ModelAndView("sinavForm","dersler",dersler);
+		List<Sinif> siniflar = sinifService.butunSinifAdlari();
+		List<ArastirmaGorevlisi> agler = agService.butunAgAdlari();
+		List<String> butunSaatler = sinavService.saatAyarla();
+		
+		ModelAndView mav = new ModelAndView("sinavForm");
+		mav.addObject("dersler", dersler);
+		mav.addObject("siniflar", siniflar);
+		mav.addObject("agler", agler);
+		mav.addObject("saatler",butunSaatler);
+		
+		return mav;
 
 	}
 	@RequestMapping("saveSinav")

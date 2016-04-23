@@ -17,5 +17,7 @@ public interface AgDao {
 	public List<ArastirmaGorevlisi> agAra(String agAdi);
 	
 	public ArastirmaGorevlisi agAraId(long agId);
+	
+	public List<ArastirmaGorevlisi> butunAgAdlari();
 
 }

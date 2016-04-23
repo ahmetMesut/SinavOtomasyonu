@@ -18,6 +18,6 @@ public interface SinifService {
 	
 	public Sinif sinifAraId(long sinifId);
 	
-	
+	public List<Sinif> butunSinifAdlari();
 
 }
