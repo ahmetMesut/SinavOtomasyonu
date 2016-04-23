@@ -18,4 +18,5 @@ public interface DersService {
 	
 	public Ders dersAraId(long dersId);
 
+	public List<Ders> butunDersAdlari();
 }

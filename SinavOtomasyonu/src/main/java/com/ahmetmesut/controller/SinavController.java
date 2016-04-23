@@ -37,7 +37,7 @@ public class SinavController {
 	public ModelAndView newSinav(@ModelAttribute Sinav sinav){
 		logger.info("Sinav ekleniyor.Bilgi : " +sinav);
 		
-		List<Ders> dersler = dersService.butunDersler();
+		List<Ders> dersler = dersService.butunDersAdlari();
 		return new ModelAndView("sinavForm","dersler",dersler);
 
 	}

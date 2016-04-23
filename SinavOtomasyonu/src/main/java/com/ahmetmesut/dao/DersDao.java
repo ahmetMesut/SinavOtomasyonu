@@ -17,5 +17,7 @@ public interface DersDao {
 	public Ders dersGuncelle(Ders ders);
 	
 	public Ders dersAraId(long dersId);
+	
+	public List<Ders> butunDersAdlari();
 
 }

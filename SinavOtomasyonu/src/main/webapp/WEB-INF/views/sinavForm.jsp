@@ -43,7 +43,7 @@
 					<table>
 						<tr>
 							<td>Sinav Adı:</td>
-							<td><form:select path="sinavAdi" items="${dersler.dersAdi}" /></td>
+							<td><form:select path="sinavAdi" items="${dersler}" /></td>
 						</tr>
 					</table>
 

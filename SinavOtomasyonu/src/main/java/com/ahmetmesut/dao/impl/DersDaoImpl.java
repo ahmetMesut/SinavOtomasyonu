@@ -79,4 +79,9 @@ public class DersDaoImpl implements DersDao {
 		return sessionFactory.getCurrentSession().get(Ders.class, dersId);
 	}
 
+	@Override
+	public List<Ders> butunDersAdlari() {
+		return sessionFactory.getCurrentSession().createSQLQuery("SELECT dersAdi FROM okulveritabani.ders").list();
+	}
+
 }

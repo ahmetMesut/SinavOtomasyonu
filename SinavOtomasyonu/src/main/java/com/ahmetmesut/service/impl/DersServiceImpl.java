@@ -55,5 +55,11 @@ public class DersServiceImpl implements DersService {
 		return dersDao.dersAraId(dersId);
 	}
 
+
+	@Override
+	public List<Ders> butunDersAdlari() {
+		return dersDao.butunDersAdlari();
+	}
+
 	
 }
