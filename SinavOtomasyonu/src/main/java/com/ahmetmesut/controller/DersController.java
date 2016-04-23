@@ -39,7 +39,9 @@ public class DersController {
 	    public ModelAndView updateDers(@RequestParam long id, @ModelAttribute Ders ders) {
 	    	logger.info("Ders duzenleniyor. Id : "+id);
 	    	ders = dersService.dersAraId(id);
-	        return new ModelAndView("dersForm", "dersObject", ders);
+	        return new ModelAndView("dersForm","dersObject", ders);
+	        
+	        
 	    }
 	    
 	    @RequestMapping("saveDers")

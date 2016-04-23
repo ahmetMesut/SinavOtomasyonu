@@ -35,7 +35,7 @@
 				<form:form id="dersRegisterForm" cssClass="form-horizontal"
 					modelAttribute="ders" method="post" action="saveDers">
 				
-				   <form:hidden path="dersId" value="${dersObject.adersId}" />
+				   <form:hidden path="dersId" value="${dersObject.dersId}" />
 
 					<div class="form-group">
 						<div class="control-label col-xs-3">
@@ -65,16 +65,6 @@
 							<form:input cssClass="form-control" path="hocasi" value="${dersObject.hocasi}" />
 						</div>
 					</div>
-					
-					<div class="form-group">
-						<div class="control-label col-xs-3">
-							<form:label path="gozetmenHocasi">Gözetmen Hocası</form:label>
-						</div>
-						<div class="col-xs-6">
-							<form:input cssClass="form-control" path="gozetmenHocasi" value="${dersObject.gozetmenHocasi}" />
-						</div>
-					</div>
-
 			
 					<div class="form-group">
 						<div class="row">
@@ -122,13 +112,7 @@
 				$('#hocasi').focus();
 				return false;
 			}
-			
-			if (gozetmenHocasi.length == 0) {
-				alert('Lütfen dersin gözetmen hocasını giriniz.');
-				$('#gozetmenHocasi').focus();
-				return false;
-			}
-
+		
 			return true;
 		};
 	</script>

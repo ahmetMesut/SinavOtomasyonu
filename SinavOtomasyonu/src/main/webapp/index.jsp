@@ -30,6 +30,9 @@
 		<div class="alert alert-info">
 			Sınıf <br> <a href="newSinif">Ekle</a> | <a href="listAllSinif">Listele</a>
 		</div>
+		<div class="alert alert-info">
+			Sinav <br> <a href="newSinav">Ekle</a> | <a href="listAllSinav">Listele</a>
+		</div>
 
 	</div>
 

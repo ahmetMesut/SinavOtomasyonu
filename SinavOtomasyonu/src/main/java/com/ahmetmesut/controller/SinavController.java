@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ahmetmesut.model.Sinav;
+import com.ahmetmesut.service.DersService;
 import com.ahmetmesut.service.SinavService;
 
 @Controller
@@ -18,6 +19,8 @@ public class SinavController {
 	
 	@Autowired
 	SinavService sinavService;
+	@Autowired
+	DersService dersService;
 
 	private static final Logger logger = Logger.getLogger(SinavController.class);
 	
@@ -30,7 +33,7 @@ public class SinavController {
 
 	@RequestMapping("newSinav")
 	public ModelAndView newSinav(@ModelAttribute Sinav sinav){
-		logger.info("Sinif ekleniyor.Bilgi : " +sinav);
+		logger.info("Sinav ekleniyor.Bilgi : " +sinav);
 		return new ModelAndView("sinavForm");
 
 	}
@@ -74,9 +77,6 @@ public class SinavController {
     List<Sinav> sinavListe = sinavService.sinavAra(sinavAdi);
     return new ModelAndView("sinavListe", "sinavListe", sinavListe); 
     } 
-	
-	
-	
 	
 	
 }

@@ -59,7 +59,7 @@
                         <th>Adı</th>
                         <th>Verildigi Yil</th>
                         <th>Hocası</th>
-                        <th>Gözetmen Hocası</th>
+                   
                         <th>Düzenle</th>
                         <th>Sil</th>
                     </tr>
@@ -71,7 +71,7 @@
                         	<th><c:out value="${d.dersAdi}"/></th>
                         	<th><c:out value="${d.verildigiSene}"/></th>
                         	<th><c:out value="${d.hocasi}"/></th>
-                        	<th><c:out value="${d.gozetmenHocasi}"/></th>
+                      
                         	<th><a href="editDers?id=<c:out value='${d.dersId}'/>">Düzenle</a></th>
                         	<th><a href="removeDers?id=<c:out value='${d.dersId}'/>">Sil</a></th>                         	
                         </tr>

@@ -48,13 +48,11 @@ public class DersDaoImpl implements DersDao {
 			String dersAdi = (String) dersObject[1];
 			String verildigiSene = (String) dersObject[2];
 			String hocasi = (String) dersObject[3];
-			String gozetmenHocasi = (String) dersObject[4];
 		
 			ders.setDersId(dersId);
 			ders.setDersAdi(dersAdi);
 			ders.setVerildigiSene(verildigiSene);
 			ders.setHocasi(hocasi);
-			ders.setGozetmenHocasi(gozetmenHocasi);
 								
 			dersler.add(ders);
 		}

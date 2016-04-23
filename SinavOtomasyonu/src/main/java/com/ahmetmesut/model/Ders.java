@@ -26,19 +26,16 @@ public class Ders  implements Serializable{
 	private String verildigiSene;
 	@Column
 	private String hocasi;
-	@Column
-	public String gozetmenHocasi;
-	
+
 	//----------------------
 	public Ders() {
 		System.out.println("Ders()");
 	}
 
-	public Ders(String dersAdi, String verildigiSene, String hocasi,String gozetmenHocasi) {
+	public Ders(String dersAdi, String verildigiSene, String hocasi) {
 		this.dersAdi = dersAdi;
 		this.verildigiSene = verildigiSene;
 		this.hocasi = hocasi;
-		this.gozetmenHocasi = gozetmenHocasi;
 	}
 	//--------------------------
 
@@ -70,13 +67,6 @@ public class Ders  implements Serializable{
 		return dersId;
 	}
 
-	public String getGozetmenHocasi() {
-		return gozetmenHocasi;
-	}
-
-	public void setGozetmenHocasi(String gozetmenHocasi) {
-		this.gozetmenHocasi = gozetmenHocasi;
-	} 
 	public void setDersId(long dersId) {
 		this.dersId = dersId;
 	}
