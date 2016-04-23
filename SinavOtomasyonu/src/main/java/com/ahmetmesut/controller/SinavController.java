@@ -1,6 +1,7 @@
 package com.ahmetmesut.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import org.jboss.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.ahmetmesut.model.Ders;
 import com.ahmetmesut.model.Sinav;
 import com.ahmetmesut.service.DersService;
 import com.ahmetmesut.service.SinavService;
@@ -34,7 +36,9 @@ public class SinavController {
 	@RequestMapping("newSinav")
 	public ModelAndView newSinav(@ModelAttribute Sinav sinav){
 		logger.info("Sinav ekleniyor.Bilgi : " +sinav);
-		return new ModelAndView("sinavForm");
+		
+		List<Ders> dersler = dersService.butunDersler();
+		return new ModelAndView("sinavForm","dersler",dersler);
 
 	}
 	@RequestMapping("saveSinav")
@@ -78,5 +82,5 @@ public class SinavController {
     return new ModelAndView("sinavListe", "sinavListe", sinavListe); 
     } 
 	
-	
+   
 }

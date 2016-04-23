@@ -40,22 +40,13 @@
 					modelAttribute="sinav" method="post" action="saveSinav">
 
 					<form:hidden path="sinavId" value="${sinavObject.sinavId}" />
+					<table>
+						<tr>
+							<td>Sinav Adı:</td>
+							<td><form:select path="sinavAdi" items="${dersler.dersAdi}" /></td>
+						</tr>
+					</table>
 
-					<div class="form-group">
-						<div class="control-label col-xs-3">
-							<form:label path="sinavAdi">Sinav Adi</form:label>
-						</div>
-						<div class="col-xs-6">
-							<form:select id="sinavAdi" path="sinavAdi" type="text"
-								class="form:input-large">
-								<c:forEach items="${dersAdlari}" var="d">
-
-									<form:option value="${d.dersAdi}">${d.dersAdi}</form:option>
-
-								</c:forEach>
-							</form:select>
-						</div>
-					</div>
 
 
 				</form:form>
