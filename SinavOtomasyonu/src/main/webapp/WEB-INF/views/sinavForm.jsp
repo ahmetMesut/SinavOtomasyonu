@@ -33,7 +33,7 @@
 			<div class="panel-heading">
 				<h3 class="panel-title">Sinav Bilgisi</h3>
 				<div align="right">
-					<a href="listAllDers">Sinavlari Listele</a>
+					<a href="listAllSinav">Sinavlari Listele</a>
 				</div>
 				<div align="right">
 					<a href="/">Anasayfaya Dön</a>
@@ -49,16 +49,17 @@
 						<table class="table table-hover table-bordered">
 							<thead style="background-color: #F2F5A9;">
 								<tr>
+								    <th>Sınav Günü</th>
 									<th>Sınav Saati</th>
 									<th>Sınav Adı</th>
 									<th>Sınav Sınıfı</th>
 									<th>Gözetmen Hocası</th>
 									<th>Kaydet</th>
-									<th>Sil</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
+								    <th><form:select path="sinavGunu" items="${gunler}" /></th>
 									<th><form:select path="sinavSaati" items="${saatler}" /></th>
 									<th><form:select path="sinavAdi" items="${dersler}" /></th>
 									<th><form:select path="sinavSinifi" items="${siniflar}" /></th>

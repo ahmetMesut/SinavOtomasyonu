@@ -55,16 +55,19 @@
                 <table class="table table-hover table-bordered">
                     <thead style="background-color: #F2F5A9;">
                     <tr>
-						<th>Sınav Saati</th>
+                    				<th>Sınav Günü</th>
+									<th>Sınav Saati</th>
 									<th>Sınav Adı</th>
 									<th>Sınav Sınıfı</th>
 									<th>Gözetmen Hocası</th>
 									<th>Kaydet</th>
+									<th>Sil</th>
 								</tr>
                     </thead>
                     <tbody>
                     <c:forEach items="${sinavListe}" var="s">
                         <tr>
+                        	<th><c:out value="${s.sinavGunu}"/></th>
                         	<th><c:out value="${s.sinavSaati}"/></th>
                         	<th><c:out value="${s.sinavAdi}"/></th>
                         	<th><c:out value="${s.sinavSinifi}"/></th>

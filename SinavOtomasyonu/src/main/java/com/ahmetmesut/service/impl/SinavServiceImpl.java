@@ -57,5 +57,9 @@ public class SinavServiceImpl implements SinavService {
 	public List<String> saatAyarla() {
 		return sinavDao.saatAyarla();
 	}
+	@Override
+	public List<String> gunAyarla() {
+		return sinavDao.gunAyarla();
+	}
 
 }

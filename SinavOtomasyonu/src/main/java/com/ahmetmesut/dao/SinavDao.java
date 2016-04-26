@@ -19,4 +19,6 @@ public interface SinavDao {
 	public Sinav sinavAraId(long sinavId);
 	
 	public List<String> saatAyarla();
+	
+	public List<String> gunAyarla();
 }

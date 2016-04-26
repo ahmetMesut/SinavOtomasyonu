@@ -3,6 +3,7 @@ package com.ahmetmesut.service;
 import java.util.List;
 
 import com.ahmetmesut.model.Sinav;
+import com.ahmetmesut.model.Sinif;
 
 public interface SinavService {
 	
@@ -20,4 +21,5 @@ public interface SinavService {
 	
 	public List<String> saatAyarla();
 
+	public List<String> gunAyarla();
 }

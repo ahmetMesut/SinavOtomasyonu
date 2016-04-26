@@ -48,12 +48,14 @@ public class SinavController {
 		List<Sinif> siniflar = sinifService.butunSinifAdlari();
 		List<ArastirmaGorevlisi> agler = agService.butunAgAdlari();
 		List<String> butunSaatler = sinavService.saatAyarla();
+		List<String> gunler = sinavService.gunAyarla();
 		
 		ModelAndView mav = new ModelAndView("sinavForm");
 		mav.addObject("dersler", dersler);
 		mav.addObject("siniflar", siniflar);
 		mav.addObject("agler", agler);
 		mav.addObject("saatler",butunSaatler);
+		mav.addObject("gunler",gunler);
 		
 		return mav;
 
@@ -72,8 +74,23 @@ public class SinavController {
 	@RequestMapping("editSinav")
 	public ModelAndView updateSinif(@RequestParam long id,@ModelAttribute Sinav sinav){
 		logger.info("Sinav düzenleniyor.Bilgi Id:" +id);
+		
+		List<Ders> dersler = dersService.butunDersAdlari();
+		List<Sinif> siniflar = sinifService.butunSinifAdlari();
+		List<ArastirmaGorevlisi> agler = agService.butunAgAdlari();
+		List<String> butunSaatler = sinavService.saatAyarla();
+		List<String> gunler = sinavService.gunAyarla();
+		
+		ModelAndView mav = new ModelAndView("sinavForm");
 		sinav =sinavService.sinavAraId(id);
-		return new ModelAndView("sinavForm", "sinavObject", sinav);
+		mav.addObject("sinavObject", sinav);
+		mav.addObject("dersler", dersler);
+		mav.addObject("siniflar", siniflar);
+		mav.addObject("agler", agler);
+		mav.addObject("saatler",butunSaatler);
+		mav.addObject("gunler",gunler);
+		
+		return mav;
 	}
 	
 	

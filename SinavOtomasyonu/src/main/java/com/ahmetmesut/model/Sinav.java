@@ -20,6 +20,8 @@ public class Sinav implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long sinavId;
 	@Column
+	private String sinavGunu;
+	@Column
 	private String sinavSaati;
 	@Column
 	private String sinavAdi;
@@ -27,6 +29,7 @@ public class Sinav implements Serializable {
 	private String sinavSinifi;
 	@Column
 	private String gozetmenHocasi;
+	
 	//---------------------------------
 	
 	public Sinav() {
@@ -81,6 +84,15 @@ public class Sinav implements Serializable {
 		this.gozetmenHocasi = gozetmenHocasi;
 	}
 
+	public String getSinavGunu() {
+		return sinavGunu;
+	}
+
+	public void setSinavGunu(String sinavGunu) {
+		this.sinavGunu = sinavGunu;
+	}
+
+	
 	//---------------------------------
 	
 	
