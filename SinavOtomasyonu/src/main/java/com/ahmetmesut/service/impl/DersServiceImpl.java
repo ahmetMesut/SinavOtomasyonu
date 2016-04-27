@@ -24,8 +24,8 @@ public class DersServiceImpl implements DersService {
 
 
 	@Override
-	public void derOluþtur(Ders ders) {
-		dersDao.derOluþtur(ders);
+	public void derOlustur(Ders ders) {
+		dersDao.derOlustur(ders);
 		
 	}
 

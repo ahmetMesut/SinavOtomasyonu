@@ -48,7 +48,7 @@ public class DersController {
 	    public ModelAndView saveDers(@ModelAttribute Ders ders) {
 	    	logger.info("Ders kaydediliyor. : " + ders);
 	        if(ders.getId() == 0){ 
-	        	dersService.derOluþtur(ders);;
+	        	dersService.derOlustur(ders);;
 	        } else {
 	        	dersService.dersGuncelle(ders);
 	        }

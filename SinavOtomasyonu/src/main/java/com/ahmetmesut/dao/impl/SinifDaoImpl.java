@@ -26,7 +26,7 @@ public class SinifDaoImpl implements SinifDao {
 	
 	//------------------------------------
 	@Override
-	public void sinifOluþtur(Sinif sinif) {
+	public void sinifOlustur(Sinif sinif) {
 		sessionFactory.getCurrentSession().save(sinif);
 	}
 
@@ -86,7 +86,7 @@ public class SinifDaoImpl implements SinifDao {
 
 	@Override
 	public List<Sinif> butunSinifAdlari() {
-		return sessionFactory.getCurrentSession().createSQLQuery("SELECT sinifAdi FROM okulveritabani.sinif").list();
+		return sessionFactory.getCurrentSession().createSQLQuery("SELECT sinifAdi FROM okulveritabani.Sinif").list();
 	}
 
 }

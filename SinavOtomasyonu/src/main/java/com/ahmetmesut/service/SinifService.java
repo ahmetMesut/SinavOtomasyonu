@@ -6,7 +6,7 @@ import com.ahmetmesut.model.Sinif;
 
 public interface SinifService {
 	
-	public void sinifOluþtur(Sinif sinif);
+	public void sinifOlustur(Sinif sinif);
 	
 	public List<Sinif> butunSiniflar();
 	

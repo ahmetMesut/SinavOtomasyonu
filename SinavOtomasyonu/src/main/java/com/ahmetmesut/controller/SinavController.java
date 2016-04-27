@@ -73,7 +73,7 @@ public class SinavController {
 	}
 	@RequestMapping("editSinav")
 	public ModelAndView updateSinif(@RequestParam long id,@ModelAttribute Sinav sinav){
-		logger.info("Sinav düzenleniyor.Bilgi Id:" +id);
+		logger.info("Sinav duzenleniyor.Bilgi Id:" +id);
 		
 		List<Ders> dersler = dersService.butunDersAdlari();
 		List<Sinif> siniflar = sinifService.butunSinifAdlari();

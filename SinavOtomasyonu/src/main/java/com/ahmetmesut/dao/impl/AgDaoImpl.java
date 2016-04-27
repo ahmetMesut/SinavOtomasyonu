@@ -91,7 +91,7 @@ public class AgDaoImpl implements AgDao {
 
 	@Override
 	public List<ArastirmaGorevlisi> butunAgAdlari() {
-		return sessionFactory.getCurrentSession().createSQLQuery("SELECT agAdi FROM okulveritabani.arastirma_gorevlisi").list();
+		return sessionFactory.getCurrentSession().createSQLQuery("SELECT agAdi FROM okulveritabani.Arastirma_Gorevlisi").list();
 	}
 
 }

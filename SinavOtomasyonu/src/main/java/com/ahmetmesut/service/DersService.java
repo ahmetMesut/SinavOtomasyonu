@@ -6,7 +6,7 @@ import com.ahmetmesut.model.Ders;
 
 public interface DersService {
 	
-	public void derOluþtur(Ders ders);
+	public void derOlustur(Ders ders);
 	
 	public List<Ders> butunDersler();
 	

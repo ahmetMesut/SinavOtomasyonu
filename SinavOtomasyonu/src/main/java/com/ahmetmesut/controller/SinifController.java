@@ -46,7 +46,7 @@ public class SinifController {
 	    public ModelAndView saveSinif(@ModelAttribute Sinif sinif) {
 	    	logger.info("Ders kaydediliyor. : " + sinif);
 	        if(sinif.getSinifId() == 0){ 
-	        	sinifService.sinifOluþtur(sinif);
+	        	sinifService.sinifOlustur(sinif);
 	        } else {
 	        	sinifService.sinifGuncelle(sinif);
 	        }

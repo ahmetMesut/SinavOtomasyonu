@@ -106,9 +106,9 @@ public class SinavDaoImpl implements SinavDao {
 	public List<String> gunAyarla() {
 		List<String> gunler = new ArrayList<String>();
 		gunler.add("Pazartesi");
-		gunler.add("Salı");
-		gunler.add("Çarşamba");
-		gunler.add("Perşembe");
+		gunler.add("SalÄ±");
+		gunler.add("Carsamba");
+		gunler.add("Persembe");
 		gunler.add("Cuma");
 		gunler.add("Cumartesi");
 		gunler.add("Pazar");

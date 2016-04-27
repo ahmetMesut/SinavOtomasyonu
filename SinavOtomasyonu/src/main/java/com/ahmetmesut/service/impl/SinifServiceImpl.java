@@ -23,8 +23,8 @@ public class SinifServiceImpl implements SinifService {
 	}
 	//----------------------------
 	@Override
-	public void sinifOluþtur(Sinif sinif) {
-		sinifDao.sinifOluþtur(sinif);
+	public void sinifOlustur(Sinif sinif) {
+		sinifDao.sinifOlustur(sinif);
 		
 	}
 

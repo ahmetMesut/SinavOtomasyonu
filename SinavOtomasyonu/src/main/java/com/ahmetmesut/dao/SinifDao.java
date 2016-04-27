@@ -7,7 +7,7 @@ import com.ahmetmesut.model.Sinif;
 public interface SinifDao {
 	
 
-	public void sinifOluþtur(Sinif sinif);
+	public void sinifOlustur(Sinif sinif);
 	
 	public List<Sinif> butunSiniflar();
 	

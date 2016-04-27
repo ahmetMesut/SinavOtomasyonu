@@ -23,7 +23,7 @@ public class DersDaoImpl implements DersDao {
 	//---------------------------------------	
 
 	@Override
-	public void derOluþtur(Ders ders) {
+	public void derOlustur(Ders ders) {
     	sessionFactory.getCurrentSession().save(ders); 
 
 	}
@@ -81,7 +81,7 @@ public class DersDaoImpl implements DersDao {
 
 	@Override
 	public List<Ders> butunDersAdlari() {
-		return sessionFactory.getCurrentSession().createSQLQuery("SELECT dersAdi FROM okulveritabani.ders").list();
+		return sessionFactory.getCurrentSession().createSQLQuery("SELECT dersAdi FROM okulveritabani.Ders").list();
 	}
 
 }
