@@ -82,7 +82,7 @@ public class AgDaoImpl implements AgDao {
 		System.out.println(agLer);
 		return agLer;
 	}
-
+ 
 
 	@Override
 	public ArastirmaGorevlisi agAraId(long agId) {
